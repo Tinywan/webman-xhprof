@@ -1,0 +1,22 @@
+{
+  "name": "tinywan/webman-xhprof",
+  "type": "library",
+  "license": "MIT",
+  "description": "Webman plugin tinywan/webman-xhprof",
+  "require": {
+    "ext-xhprof": "*",
+    "php": ">=7.2",
+    "workerman/webman-framework": "^1.4.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tinywan\\Xhprof\\": "src"
+    }
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://mirrors.aliyun.com/composer/"
+    }
+  }
+}
