@@ -43,7 +43,7 @@ Version => 2.3.9
 ```
 # 使用
 
-配置 `config/exception.php`
+配置 `config/middleware.php`
 
 ```php
 return [
