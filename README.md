@@ -1,3 +1,6 @@
+# XHProf PHP tool for webman plugin
+[![Latest Stable Version](http://poser.pugx.org/tinywan/webman-xhprof/v)](https://packagist.org/packages/tinywan/webman-xhprof) [![Total Downloads](http://poser.pugx.org/tinywan/webman-xhprof/downloads)](https://packagist.org/packages/tinywan/webman-xhprof) [![Latest Unstable Version](http://poser.pugx.org/tinywan/webman-xhprof/v/unstable)](https://packagist.org/packages/tinywan/webman-xhprof) [![License](http://poser.pugx.org/tinywan/webman-xhprof/license)](https://packagist.org/packages/tinywan/webman-xhprof) [![PHP Version Require](http://poser.pugx.org/tinywan/webman-xhprof/require/php)](https://packagist.org/packages/tinywan/webman-xhprof)
+
 # 简介
 
 [XHProf](https://www.php.net/manual/zh/intro.xhprof.php) 是一个分层PHP性能分析工具。它报告函数级别的请求次数和各种指标，包括阻塞时间，CPU时间和内存使用情况。一个函数的开销，可细分成调用者和被调用者的开销，XHProf数据收集阶段，它记录调用次数的追踪和包容性的指标弧在动态callgraph的一个程序。它独有的数据计算的报告/后处理阶段。
