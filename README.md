@@ -95,3 +95,34 @@ IPeakMemUse%：Incl.MemUse峰值百分比。
 Excl.PeakMemUse(bytes)：Excl.MemUse峰值。单位：（字节）
 EPeakMemUse%：Excl.MemUse峰值百分比。
 ```
+
+## xhprof 简单代理配置
+
+```
+server {
+    server_name webman.xhprof.com;
+
+    root /var/www/webman-admin/vendor/tinywan/webman-xhprof/src;
+
+    location / {
+        if (!-e $request_filename) {
+            rewrite ^(.*)$ /index.php?s=/$1 last;
+        }
+    }
+
+    location ~ \.php(.*)$ {
+        try_files $fastcgi_script_name =404;
+
+        fastcgi_pass php74:9000;
+        fastcgi_index index.php;
+        fastcgi_split_path_info ^((?U).+\.php)(/?.+)$;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param PATH_INFO $fastcgi_path_info;
+        fastcgi_param PATH_TRANSLATED $document_root$fastcgi_path_info;
+
+        include fastcgi_params;
+    }
+}
+```
+
+访问地址：`http://webman.xhprof.com/xhprof/xhprof_html/index.php`
